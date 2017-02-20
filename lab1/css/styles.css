@@ -50,7 +50,8 @@ form
 {
 	width: 632px;
 	margin:0 auto;
-    padding-top:8px;
+    padding-top:3px;
+    padding-left:14px;
 }
 
 input[type="button"], input[type="submit"]
@@ -78,7 +79,30 @@ input[type="button"], input[type="submit"]
 
 .searchButtons
 {
-	padding-top:18px
+	padding-top: 21px;
+    padding-right: 14px;
+}
+
+.searchButtons input[type="submit"]
+{
+    margin-right:0;
+}
+
+.searchButtons input[type="submit"]:focus, .searchButtons input:focus {
+    border: 1px solid #4d90fe;
+    outline: none;
+}
+
+.searchButtons input[type="submit"]:hover, .searchButtons input:hover{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));
+    background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #f8f8f8;
+    background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+    background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    color: #222;
 }
 
 ul.menu 
@@ -131,6 +155,8 @@ a#tools
 {
     background-color: #fff;
     height: 44px;
+    width: 584px;
+    margin: 0 auto;
     vertical-align: top;
     border-radius: 2px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
@@ -140,13 +166,47 @@ a#tools
     -webkit-box-sizing: border-box;
     overflow: hidden;
     padding: 5px 16px 0;
-
+    position:relative;
     vertical-align: middle;
+}
+
+.pseudoInput:before
+{
+    height: 11px;
+    line-height: 0;
+    width: 19px;
+    background: url(../img/tia.png) no-repeat;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 17px;
+    right: 59px;
+    cursor: pointer;
+}
+
+.pseudoInput:after
+{
+    width: 24px;
+    height: 24px;
+    background: url(../img/microphone.png) no-repeat -3px 0;
+    background-size: 24px 24px;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 13px;
+    cursor: pointer;
+}
+
+.pseudoInput:hover, .pseudoInput:focus
+{
+    box-shadow:0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
+    border:none;
 }
 
 .searchInput
 {
-        border: none;
+    border: none;
     padding: 0px;
     margin: 0px;
     height: auto;
@@ -206,7 +266,6 @@ a#tools
 
 .searchInputBlock
 {
-    flaot:left;
 }
 
 footer
@@ -235,6 +294,7 @@ footer a
 {
     line-height: 40px;
     float:left;
+    padding-left: 3px;
 }
 
 .right 
